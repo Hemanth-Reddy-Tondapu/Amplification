@@ -17,3 +17,17 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
+
+model Vendor {
+  address   String
+  cEmail    String   @unique
+  city      String?
+  cName     String
+  country   String?
+  cPhone    Int
+  createdAt DateTime @default(now())
+  id        String   @id @default(auto()) @map("_id") @mongo.ObjectId
+  name      String   @unique
+  state     String?
+  updatedAt DateTime @updatedAt
+}
